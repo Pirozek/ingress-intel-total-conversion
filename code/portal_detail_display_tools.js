@@ -147,7 +147,8 @@ window.getAttackApGainText = function(d) {
     t += '1×\tCapture\t= ' + CAPTURE_PORTAL + '\n';
     t += '8×\tDeploy\t= ' + (8 * DEPLOY_RESONATOR) + '\n';
     t += '1×\tBonus\t= ' + COMPLETION_BONUS + '\n';
-    t += 'Sum: ' + digits(breakdown.totalAp) + ' AP';
+    t += 'Sum: ' + digits(breakdown.totalAp) + ' AP\n';
+    t += 'Destroy AP: ' + digits(breakdown.totalAp - CAPTURE_PORTAL - 8*DEPLOY_RESONATOR - COMPLETION_BONUS) + ' AP';
     return '<tt title="' + t + '">' + digits(text) + '</tt>';
   }
 
